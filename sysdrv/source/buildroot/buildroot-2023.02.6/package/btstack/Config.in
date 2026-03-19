@@ -1,4 +1,0 @@
-config BR2_PACKAGE_BTSTACK
-    bool "btstack"
-    help
-      BTSTACK

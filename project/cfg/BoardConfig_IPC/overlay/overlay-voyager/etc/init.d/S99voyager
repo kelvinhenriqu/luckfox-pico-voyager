@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Verificar se o executável existe
+if [ ! -f /bin/panu_server_voyager ]; then
+    echo "Error: /bin/panu_server_voyager not found or corrupted"
+    exit 1
+fi
+
+# Executar o programa
+/bin/panu_server_voyager
+
+# Verificar o status de saída
+if [ $? -eq 0 ]; then
+    echo "Program executed successfully"
+else
+    echo "Error occurred while executing the program"
+    exit 1
+fi
