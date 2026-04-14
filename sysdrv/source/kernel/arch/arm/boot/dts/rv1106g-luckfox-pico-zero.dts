@@ -8,14 +8,16 @@
 #include "rv1106-luckfox-pico-zero-ipc.dtsi"
 #include <dt-bindings/input/input.h>
 #include <dt-bindings/display/media-bus-format.h>
+#include <dt-bindings/soc/rockchip,boot-mode.h>
 
 / {
 	model = "Luckfox Pico Zero";
 	compatible = "rockchip,rv1103g-38x38-ipc-v10", "rockchip,rv1106g3";
 
-	restart-poweroff {
+	/* restart-poweroff disabled to allow reboot-mode to work */
+	/* restart-poweroff {
 		compatible = "restart-poweroff";
-	};
+	}; */
 
 	sdio_pwrseq: sdio-pwrseq {
 		compatible = "mmc-pwrseq-simple";
@@ -158,4 +160,9 @@
 	spidev@0 {
 		spi-max-frequency = <50000000>;
 	};
+};
+
+/**********REBOOT MODE**********/
+&reboot_mode {
+	status = "okay";
 };

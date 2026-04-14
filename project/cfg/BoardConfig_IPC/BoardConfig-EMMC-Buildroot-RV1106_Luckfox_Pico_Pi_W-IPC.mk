@@ -84,7 +84,7 @@ export RK_UBOOT_DEFCONFIG=luckfox_rv1106_uboot_defconfig
 export RK_KERNEL_DEFCONFIG=luckfox_rv1106_linux_defconfig
 
 # Kernel defconfig fragment
-export RK_KERNEL_DEFCONFIG_FRAGMENT="rv1106-bt.config luckfox_rv1106-wwan-ndis-ppp.config"
+export RK_KERNEL_DEFCONFIG_FRAGMENT="rv1106-pm.config rv1106-bt.config luckfox_rv1106-wwan-ndis-ppp.config"
 
 # Config sensor IQ files
 # RK_CAMERA_SENSOR_IQFILES format:
@@ -111,8 +111,8 @@ export RK_ENABLE_WIFI=y
 export RK_ENABLE_WIFI_CHIP=AIC8800DC
 
 # config wifi ssid and passwd
-export LF_WIFI_SSID="Your wifi ssid"
-export LF_WIFI_PSK="Your wifi password"
+export LF_WIFI_SSID="KELVIN-JTIP"
+export LF_WIFI_PSK="123321123"
 
 #################################################
 #  PRE and POST
@@ -126,4 +126,4 @@ export RK_PRE_BUILD_USERDATA_SCRIPT=luckfox-userdata-pre.sh
 
 # declare overlay directory
 export RK_POST_OVERLAY="overlay-luckfox-config overlay-luckfox-buildroot-init overlay-luckfox-buildroot-shadow\
-			overlay-luckfox-ppp overlay-luckfox-buildroot-sim7600g"
+			overlay-luckfox-ppp overlay-luckfox-buildroot-sim7600g overlay-voyager"

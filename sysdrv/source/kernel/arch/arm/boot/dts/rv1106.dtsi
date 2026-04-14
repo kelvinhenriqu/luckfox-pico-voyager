@@ -444,6 +444,7 @@
 			mode-ums = <BOOT_UMS>;
 			mode-panic = <BOOT_PANIC>;
 			mode-watchdog = <BOOT_WATCHDOG>;
+			status = "okay";
 		};
 
 		rgb: rgb {

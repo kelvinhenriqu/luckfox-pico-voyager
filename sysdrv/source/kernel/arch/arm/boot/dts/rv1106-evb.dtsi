@@ -26,9 +26,7 @@
 		};
 	};
 
-	restart-poweroff {
-		compatible = "restart-poweroff";
-	};
+	/* restart-poweroff removed - using reboot-mode instead */
 };
 
 &fiq_debugger {
